@@ -8,37 +8,39 @@
 </head>
 <body>
   <div class="container">
-<header>
-  <div class="profile-header">
-    <img src="profile.jpeg" alt="Vinisha Mangal" class="profile-pic" />
-    <div class="header-text">
-      <h1>Vinisha Mangal</h1>
-      <p>Mobile Application Development Team Lead | 9+ Years Experience</p>
-      <div class="contact">
-        <p>+91-7415100548 | <a href="mailto:mangalvinisha@gmail.com">mangalvinisha@gmail.com</a></p>
-        <p>Delhi, NCR | 
-          <a href="https://linkedin.com/in/vinisha-mangal" target="_blank">LinkedIn</a> | 
-          <a href="https://github.com/vinisha-mangal" target="_blank">GitHub</a>
-        </p>
+    <header>
+      <div class="profile-header">
+        <img src="profile.jpeg" alt="Vinisha Mangal" class="profile-pic" />
+        <div class="header-text">
+          <h1>Vinisha Mangal</h1>
+          <p>Mobile Application Development Team Lead | 9+ Years Experience</p>
+          <div class="contact">
+            <p>+91-7415100548 | <a href="mailto:mangalvinisha@gmail.com">mangalvinisha@gmail.com</a></p>
+            <p>Delhi, NCR | 
+              <a href="https://linkedin.com/in/vinisha-mangal" target="_blank">LinkedIn</a> | 
+              <a href="https://github.com/vinisha-mangal" target="_blank">GitHub</a>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
-    
+    </header>
+
     <nav>
       <ul>
-        <li onclick="showSection('summary')">Summary</li>
-        <li onclick="showSection('skills')">Skills</li>
-        <li onclick="showSection('experience')">Experience</li>
-        <li onclick="showSection('education')">Education</li>
-        <li onclick="showSection('achievements')">Achievements</li>
+        <li><a href="#summary" class="nav-link active">Summary</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
       </ul>
     </nav>
 
     <main>
-      <section id="summary" class="active">
+      <section id="summary">
         <h2>Professional Summary</h2>
-        <p>9+ years of experience in mobile app development. Strong expertise in Android, Kotlin, Java, Jetpack Compose, and team leadership. Proven record in agile delivery, stakeholder collaboration, and building scalable apps for global clients.</p>
+        <p>
+          I am a results-oriented Mobile Application Development Team Lead with over 9 years of experience delivering high-quality Android and cross-platform applications. Skilled in Kotlin, Java, Jetpack Compose, and Agile methodologies, I’ve led development teams on mission-critical projects for global brands. I thrive in fast-paced environments and excel at translating business requirements into scalable and innovative mobile solutions with a strong emphasis on user experience, performance, and maintainability.
+        </p>
       </section>
 
       <section id="skills">
@@ -69,27 +71,27 @@
               <td>Team Lead</td>
               <td>2021–Present</td>
               <td>
-                Led apps for Honda, Banking, and Unilever using Jetpack Compose, AWS, and Blockchain.<br>
-                Delivered reusable SDKs, integrated third-party services, and improved app performance by 40%.
+                Led projects for Honda, Banking, and Unilever using Jetpack Compose, AWS, Blockchain.<br>
+                Delivered reusable SDKs and reduced app load time by 40%.
               </td>
             </tr>
             <tr>
               <td>Accenture</td>
-              <td>Senior Software Engineer</td>
+              <td>Sr. Software Engineer</td>
               <td>2019–2021</td>
-              <td>Integrated GraphQL, Firebase, and analytics SDKs for global brands like P&G and BOSE.</td>
+              <td>Integrated GraphQL, Firebase, analytics tools for CenturyLink, BOSE, P&G.</td>
             </tr>
             <tr>
               <td>Tech Mahindra</td>
-              <td>Senior Software Engineer</td>
+              <td>Sr. Software Engineer</td>
               <td>2018–2019</td>
-              <td>Merged and redesigned British Telecom apps for enhanced UX.</td>
+              <td>Redesigned BT apps, enhanced UI/UX for transport logistics project.</td>
             </tr>
             <tr>
               <td>Syntel (Atos)</td>
               <td>Associate Consultant</td>
               <td>2015–2018</td>
-              <td>Built FedEx app with 1.5M+ downloads; handled audits, team mentoring.</td>
+              <td>Built FedEx mobile app with 1.5M+ downloads. Oversaw audits and team events.</td>
             </tr>
           </tbody>
         </table>
@@ -107,7 +109,7 @@
           <li>Certified AWS Cloud Practitioner</li>
           <li>Agile Professional & Technology Architect Associate – Accenture</li>
           <li>ACE Award – Delivered project ahead of time</li>
-          <li>iChamp award – Significant project contributions</li>
+          <li>iChamp award – Recognized for outstanding contributions</li>
           <li>Winning Streak Award – Syntel + FedEx</li>
         </ul>
       </section>
@@ -115,12 +117,23 @@
   </div>
 
   <script>
-    function showSection(id) {
-      document.querySelectorAll("main section").forEach(section => {
-        section.classList.remove("active");
+    const links = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      const fromTop = window.scrollY + 80;
+
+      links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
       });
-      document.getElementById(id).classList.add("active");
-    }
+    });
   </script>
 </body>
 </html>
