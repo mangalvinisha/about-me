@@ -40,6 +40,146 @@
         <h2>Professional Summary</h2>
         <p>
           I am a results-oriented Mobile Application Development Team Lead with over 9 years of experience delivering high-quality Android and cross-platform applications. Skilled in Kotlin, Java, Jetpack Compose, and Agile methodologies, I’ve led development teams on mission-critical projects for global brands. I thrive in fast-paced environments and excel at translating business requirements into scalable and innovative mobile solutions with a strong emphasis on user experience, performance, and maintainability.
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vinisha Mangal - Resume</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile-header">
+        <img src="profile.jpeg" alt="Vinisha Mangal" class="profile-pic" />
+        <div class="header-text">
+          <h1>Vinisha Mangal</h1>
+          <p>Mobile Application Development Team Lead | 9+ Years Experience</p>
+          <div class="contact">
+            <p>+91-7415100548 | <a href="mailto:mangalvinisha@gmail.com">mangalvinisha@gmail.com</a></p>
+            <p>Delhi, NCR | 
+              <a href="https://linkedin.com/in/vinisha-mangal" target="_blank">LinkedIn</a> | 
+              <a href="https://github.com/vinisha-mangal" target="_blank">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#summary" class="nav-link active">Summary</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>
+          I am a results-oriented Mobile Application Development Team Lead with over 9 years of experience delivering high-quality Android and cross-platform applications. Skilled in Kotlin, Java, Jetpack Compose, and Agile methodologies, I’ve led development teams on mission-critical projects for global brands. I thrive in fast-paced environments and excel at translating business requirements into scalable and innovative mobile solutions with a strong emphasis on user experience, performance, and maintainability.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>Android</span><span>Kotlin</span><span>Java</span><span>React Native</span>
+          <span>Jetpack Compose</span><span>Dagger / Hilt</span><span>Retrofit</span><span>Navigation Graph</span>
+          <span>Room Database</span><span>MVVM</span><span>Firebase</span><span>AWS</span>
+          <span>JUnit</span><span>RxJava</span><span>GraphQL</span><span>Git</span>
+          <span>CI/CD</span><span>Design Patterns</span><span>Agile</span><span>Jira</span>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Duration</th>
+              <th>Key Highlights</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accenture</td>
+              <td>Team Lead</td>
+              <td>2021–Present</td>
+              <td>
+                Led projects for Honda, Banking, and Unilever using Jetpack Compose, AWS, Blockchain.<br>
+                Delivered reusable SDKs and reduced app load time by 40%.
+              </td>
+            </tr>
+            <tr>
+              <td>Accenture</td>
+              <td>Sr. Software Engineer</td>
+              <td>2019–2021</td>
+              <td>Integrated GraphQL, Firebase, analytics tools for CenturyLink, BOSE, P&G.</td>
+            </tr>
+            <tr>
+              <td>Tech Mahindra</td>
+              <td>Sr. Software Engineer</td>
+              <td>2018–2019</td>
+              <td>Redesigned BT apps, enhanced UI/UX for transport logistics project.</td>
+            </tr>
+            <tr>
+              <td>Syntel (Atos)</td>
+              <td>Associate Consultant</td>
+              <td>2015–2018</td>
+              <td>Built FedEx mobile app with 1.5M+ downloads. Oversaw audits and team events.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p><strong>BE (Hons) – Computer Science & Engineering</strong></p>
+        <p>Graduated in 2015 | 4-year program</p>
+      </section>
+
+      <section id="achievements">
+        <h2>Achievements & Certifications</h2>
+        <ul>
+          <li>Certified AWS Cloud Practitioner</li>
+          <li>Agile Professional & Technology Architect Associate – Accenture</li>
+          <li>ACE Award – Delivered project ahead of time</li>
+          <li>iChamp award – Recognized for outstanding contributions</li>
+          <li>Winning Streak Award – Syntel + FedEx</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      const fromTop = window.scrollY + 80;
+
+      links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
         </p>
       </section>
 
